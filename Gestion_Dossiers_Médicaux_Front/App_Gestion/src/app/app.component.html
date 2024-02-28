@@ -1,0 +1,24 @@
+<div *ngIf="!isAdminLoggedIn" class="landing-page">
+  <header>
+    <div class="container">
+      <a href="#" ><img class="logo" src="../assets/transtu_logo.png" alt=""></a>
+    </div>
+  </header>
+  
+</div>
+
+
+<div *ngIf="isAdminLoggedIn" class="landing-page">
+  <header>
+    <div class="container">
+      <a href="#" ><img class="logo" src="../assets/transtu_logo.png" alt=""></a>
+      <ul class="links">
+        <li><a routerLink="#" routerLinkActive="active" (click)="logout()"> Logout </a></li>
+      </ul>
+    </div>
+  </header>
+</div>
+
+
+
+<router-outlet></router-outlet>
