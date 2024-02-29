@@ -1,6 +1,5 @@
 package com.pfe.gestionmedical.repository;
 
-import com.pfe.gestionmedical.entity.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -4,11 +4,13 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 import { AuthGuard } from '../../auth/guards/auth.guard'
 import { LoginComponent } from '../../auth/components/login/login.component'
 import { LoginAuthGuard } from '../../auth/guards/login.guard'
+import { UsersComponent } from './components/users/users.component'
 
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent ,canActivate: [LoginAuthGuard]},
   { path: 'dashboard', component: AdminDashboardComponent,canActivate: [AuthGuard] },
+  { path: 'users', component: UsersComponent }
 ]
 
 @NgModule({

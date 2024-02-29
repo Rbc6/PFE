@@ -10,9 +10,8 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/admin/admin.module').then(m => m.AdminModule)
   },
- 
-]
-
+  ];
+  
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

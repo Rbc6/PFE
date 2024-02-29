@@ -4,11 +4,11 @@ import {
   InputNumber,
   NzConfigService,
   WithConfig
-} from "./chunk-UAFG5FED.js";
+} from "./chunk-UBCXADF2.js";
 import {
   NgIf,
   NgTemplateOutlet
-} from "./chunk-Z6BMUOSW.js";
+} from "./chunk-BM37EVK5.js";
 import {
   BehaviorSubject,
   ChangeDetectorRef,
@@ -47,9 +47,9 @@ import {
   ɵɵtemplateRefExtractor,
   ɵɵtext,
   ɵɵtextInterpolate
-} from "./chunk-AOUAQLDS.js";
+} from "./chunk-F5VXPRTG.js";
 
-// ../../../node_modules/ng-zorro-antd/fesm2022/ng-zorro-antd-spin.mjs
+// node_modules/ng-zorro-antd/fesm2022/ng-zorro-antd-spin.mjs
 function NzSpinComponent_ng_template_0_Template(rf, ctx) {
   if (rf & 1) {
     ɵɵelementStart(0, "span", 3);

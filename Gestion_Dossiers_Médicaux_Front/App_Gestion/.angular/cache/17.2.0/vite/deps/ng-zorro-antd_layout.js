@@ -2,14 +2,14 @@ import {
   NavigationEnd,
   Router,
   RouterLink
-} from "./chunk-4EF6LHKD.js";
+} from "./chunk-34KFHO5Y.js";
 import {
   NzNoAnimationDirective
-} from "./chunk-3LPHKHEX.js";
+} from "./chunk-VS3EECQI.js";
 import {
   POSITION_MAP,
   getPlacementName
-} from "./chunk-WTG472T4.js";
+} from "./chunk-RF6QNWWG.js";
 import {
   CdkConnectedOverlay,
   CdkOverlayOrigin,
@@ -17,28 +17,28 @@ import {
   collapseMotion,
   slideMotion,
   zoomBigMotion
-} from "./chunk-V6PGGG7H.js";
+} from "./chunk-KS4LK5BD.js";
 import {
   NzBreakpointService,
   NzOutletModule,
   NzStringTemplateOutletDirective,
   siderResponsiveMap
-} from "./chunk-4NM7EKDE.js";
+} from "./chunk-VWF7HNJE.js";
 import {
   NzIconDirective,
   NzIconModule,
   Platform
-} from "./chunk-ZHHSKSX5.js";
+} from "./chunk-S5KEFN3Z.js";
 import {
   Directionality,
   InputBoolean,
   inNextTick,
   toCssPixel
-} from "./chunk-UAFG5FED.js";
-import "./chunk-TY64BIVX.js";
-import "./chunk-HJ5UVQMQ.js";
-import "./chunk-7PU6QDCW.js";
-import "./chunk-3B7N5FVV.js";
+} from "./chunk-UBCXADF2.js";
+import "./chunk-IV3KQ6CZ.js";
+import "./chunk-UCKDGZ4V.js";
+import "./chunk-XU6KJFTU.js";
+import "./chunk-NKASZPQJ.js";
 import {
   NgClass,
   NgIf,
@@ -46,7 +46,7 @@ import {
   NgSwitchCase,
   NgSwitchDefault,
   NgTemplateOutlet
-} from "./chunk-Z6BMUOSW.js";
+} from "./chunk-BM37EVK5.js";
 import {
   BehaviorSubject,
   ChangeDetectionStrategy,
@@ -121,9 +121,9 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate,
   ɵɵviewQuery
-} from "./chunk-AOUAQLDS.js";
+} from "./chunk-F5VXPRTG.js";
 
-// ../../../node_modules/ng-zorro-antd/fesm2022/ng-zorro-antd-menu.mjs
+// node_modules/ng-zorro-antd/fesm2022/ng-zorro-antd-menu.mjs
 var _c0 = ["nz-menu-item", ""];
 var _c1 = ["*"];
 var _c2 = ["nz-submenu-inline-child", ""];
@@ -1910,7 +1910,7 @@ var NzMenuModule = _NzMenuModule;
   }], null, null);
 })();
 
-// ../../../node_modules/ng-zorro-antd/fesm2022/ng-zorro-antd-layout.mjs
+// node_modules/ng-zorro-antd/fesm2022/ng-zorro-antd-layout.mjs
 var _c02 = ["*"];
 var _c12 = ["nz-sider-trigger", ""];
 function NzSiderTriggerComponent_ng_container_0_ng_template_1_Template(rf, ctx) {

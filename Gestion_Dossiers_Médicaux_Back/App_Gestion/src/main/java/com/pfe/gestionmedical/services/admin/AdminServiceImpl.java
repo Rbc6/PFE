@@ -1,7 +1,6 @@
 package com.pfe.gestionmedical.services.admin;
 
 import com.pfe.gestionmedical.dto.CarDto;
-import com.pfe.gestionmedical.entity.Car;
 import com.pfe.gestionmedical.repository.CarRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

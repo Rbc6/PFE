@@ -1,7 +1,7 @@
 import {
   InputBoolean,
   coerceElement
-} from "./chunk-UAFG5FED.js";
+} from "./chunk-UBCXADF2.js";
 import {
   ANIMATION_MODULE_TYPE,
   Directive,
@@ -18,9 +18,9 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵdirectiveInject
-} from "./chunk-AOUAQLDS.js";
+} from "./chunk-F5VXPRTG.js";
 
-// ../../../node_modules/ng-zorro-antd/fesm2022/ng-zorro-antd-core-no-animation.mjs
+// node_modules/ng-zorro-antd/fesm2022/ng-zorro-antd-core-no-animation.mjs
 var DISABLED_CLASSNAME = "nz-animate-disabled";
 var _NzNoAnimationDirective = class _NzNoAnimationDirective {
   constructor(element, renderer, animationType) {
@@ -113,4 +113,4 @@ var NzNoAnimationModule = _NzNoAnimationModule;
 export {
   NzNoAnimationDirective
 };
-//# sourceMappingURL=chunk-3LPHKHEX.js.map
+//# sourceMappingURL=chunk-VS3EECQI.js.map

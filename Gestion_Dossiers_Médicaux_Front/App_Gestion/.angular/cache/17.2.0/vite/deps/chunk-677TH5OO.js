@@ -2,13 +2,13 @@ import {
   NzIconDirective,
   NzIconModule,
   Platform
-} from "./chunk-ZHHSKSX5.js";
+} from "./chunk-S5KEFN3Z.js";
 import {
   Directionality,
   InputBoolean,
   NzConfigService,
   WithConfig
-} from "./chunk-UAFG5FED.js";
+} from "./chunk-UBCXADF2.js";
 import {
   ANIMATION_MODULE_TYPE,
   CSP_NONCE,
@@ -52,9 +52,9 @@ import {
   ɵɵprojectionDef,
   ɵɵqueryRefresh,
   ɵɵtemplate
-} from "./chunk-AOUAQLDS.js";
+} from "./chunk-F5VXPRTG.js";
 
-// ../../../node_modules/ng-zorro-antd/fesm2022/ng-zorro-antd-core-transition-patch.mjs
+// node_modules/ng-zorro-antd/fesm2022/ng-zorro-antd-core-transition-patch.mjs
 var _NzTransitionPatchDirective = class _NzTransitionPatchDirective {
   setHiddenAttribute() {
     if (this.hidden) {
@@ -132,7 +132,7 @@ var NzTransitionPatchModule = _NzTransitionPatchModule;
   }], null, null);
 })();
 
-// ../../../node_modules/ng-zorro-antd/fesm2022/ng-zorro-antd-core-wave.mjs
+// node_modules/ng-zorro-antd/fesm2022/ng-zorro-antd-core-wave.mjs
 var NzWaveRenderer = class {
   get waveAttributeName() {
     return this.insertExtraNode ? "ant-click-animating" : "ant-click-animating-without-extra-node";
@@ -388,7 +388,7 @@ var NzWaveModule = _NzWaveModule;
   }], null, null);
 })();
 
-// ../../../node_modules/ng-zorro-antd/fesm2022/ng-zorro-antd-button.mjs
+// node_modules/ng-zorro-antd/fesm2022/ng-zorro-antd-button.mjs
 var _c0 = ["nz-button", ""];
 function NzButtonComponent_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
@@ -751,4 +751,4 @@ export {
   NzButtonGroupComponent,
   NzButtonModule
 };
-//# sourceMappingURL=chunk-B56CVPWP.js.map
+//# sourceMappingURL=chunk-677TH5OO.js.map
