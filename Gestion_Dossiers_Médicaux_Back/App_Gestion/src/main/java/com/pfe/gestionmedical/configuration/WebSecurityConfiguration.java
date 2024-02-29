@@ -1,6 +1,6 @@
 package com.pfe.gestionmedical.configuration;
 
-import com.pfe.gestionmedical.enums.UserRole;
+
 import com.pfe.gestionmedical.services.jwt.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -33,8 +33,7 @@ public class WebSecurityConfiguration {
         httpSecurity.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(req -> req
                         .requestMatchers("/api/auth/**").permitAll()
-                        .requestMatchers("/api/admin/**").hasAnyAuthority(UserRole.ADMIN.name())
-                        .requestMatchers("/api/customer/**").hasAnyAuthority(UserRole.CUSTOMER.name())
+                        .requestMatchers("/api/admin/**").hasAnyAuthority("ADMIN")
                         .anyRequest().authenticated()).sessionManagement
                         (management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider())

@@ -40,13 +40,11 @@ export class LoginComponent implements OnInit {
 
         StorageService.saveUser(user)
         StorageService.saveToken(res.jwt)
-
+        
         if (StorageService.isAdminLoggedIn()) {
           this.router.navigateByUrl('/admin/dashboard')
-        } else {
-          // Redirect to a default page if not an admin
-          this.router.navigateByUrl('/dashboard')
-        }
+        } 
+
       } else {
         this.message.error('Bad credentials', {
           nzDuration: 3000

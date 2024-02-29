@@ -35,17 +35,7 @@ public class AuthController {
     private final JwtUtil jwtUtil;
     private final UserRepository userRepository;
 
-    @PostMapping("/signup")
-    public ResponseEntity<?> signupCustomer(@RequestBody SignupRequest signupRequest) {
-        if (authService.hasCustomerWithEmail(signupRequest.getEmail()))
-            return new ResponseEntity<>("Customer already exists", HttpStatus.NOT_ACCEPTABLE);
 
-        UserDto createdCustomerDto = authService.createCustomer(signupRequest);
-
-        if (createdCustomerDto == null) return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-
-        return new ResponseEntity<>(createdCustomerDto, HttpStatus.CREATED);
-    }
 
     @PostMapping("/login")
     public AuthenticationResponse login(@RequestBody AuthenticationRequest authenticationRequest) throws BadCredentialsException, DisabledException, UsernameNotFoundException {
@@ -64,7 +54,7 @@ public class AuthController {
         if (optionalUser.isPresent()) {
             authenticationResponse.setJwt(jwt);
             authenticationResponse.setUserId(optionalUser.get().getId());
-            authenticationResponse.setUserRole(optionalUser.get().getUserRole());
+            authenticationResponse.setRole(optionalUser.get().getRole());
         }
         return authenticationResponse;
     }

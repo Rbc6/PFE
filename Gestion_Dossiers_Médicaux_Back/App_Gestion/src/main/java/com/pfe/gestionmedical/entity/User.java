@@ -1,6 +1,6 @@
 package com.pfe.gestionmedical.entity;
 
-import com.pfe.gestionmedical.enums.UserRole;
+
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
@@ -20,11 +20,14 @@ public class User implements UserDetails {
     private String name;
     private String email;
     private String password;
-    private UserRole userRole;
+
+    @ManyToOne()
+    @JoinColumn(name="role")
+    private Role role;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority(userRole.name()));
+        return List.of(new SimpleGrantedAuthority(role.getLabel()));
     }
 
     @Override

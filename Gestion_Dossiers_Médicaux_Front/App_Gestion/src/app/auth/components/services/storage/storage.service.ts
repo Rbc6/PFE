@@ -29,7 +29,7 @@ export class StorageService {
     return JSON.parse(localStorage.getItem(USER) || '{}')
   }
 
-  static getUserRole(): string {
+  static getUserRole(): any {
     const user = this.getUser()
 
     if (user == null) return ''
@@ -40,15 +40,10 @@ export class StorageService {
   static isAdminLoggedIn(): boolean {
     if (this.getToken() == null) return false
 
-    return this.getUserRole() === 'ADMIN'
+    return this.getUserRole() === 0
   }
 
-  static isCustomerLoggedIn(): boolean {
-    if (this.getToken() == null) return false
-
-    return this.getUserRole() === 'CUSTOMER'
-  }
-
+ 
   static logout() {
     localStorage.removeItem(TOKEN)
     localStorage.removeItem(USER)
