@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Injectable } from '@angular/core'
 import { Observable } from 'rxjs'
+import { StorageService } from '../storage/storage.service'
 
 const BASE_URL = ['http://localhost:8080']
 
@@ -12,6 +13,8 @@ export class AuthService {
 
 
   login(loginRequest: any): Observable<any> {
-    return this.http.post(`${BASE_URL}/api/auth/login`, loginRequest)
+    return this.http.post(`${BASE_URL}/api/auth/login`, loginRequest,)
   }
+ 
+  
 }

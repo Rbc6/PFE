@@ -23,7 +23,7 @@ public class AuthServiceImpl implements AuthService {
 
         if (adminAccount == null) {
             User newAdminAccount = new User();
-            newAdminAccount.setName("Admin");
+            newAdminAccount.setFirstname("Admin");
             newAdminAccount.setEmail("admin@test.com");
             newAdminAccount.setPassword(new BCryptPasswordEncoder().encode("admin"));
             newAdminAccount.setRole(adminRole);

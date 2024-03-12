@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.fb.group({
       email: [null, [Validators.email, Validators.required]],
       password: [null, [Validators.required]]
+      
     })
   }
 
@@ -35,15 +36,18 @@ export class LoginComponent implements OnInit {
       if (res.userId != null) {
         const user = {
           id: res.userId,
-          role: res.userRole
+          role: res.role.id
         }
 
+  
         StorageService.saveUser(user)
         StorageService.saveToken(res.jwt)
         
         if (StorageService.isAdminLoggedIn()) {
           this.router.navigateByUrl('/admin/dashboard')
-        } 
+        } else if(StorageService.isMedecinLoggedIn()){
+          this.router.navigateByUrl('/medecin/dashborad')
+        }
 
       } else {
         this.message.error('Bad credentials', {

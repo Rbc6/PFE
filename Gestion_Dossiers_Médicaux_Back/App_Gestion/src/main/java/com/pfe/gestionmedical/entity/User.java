@@ -1,6 +1,7 @@
 package com.pfe.gestionmedical.entity;
 
 
+import com.pfe.gestionmedical.dto.UserDto;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
@@ -17,9 +18,11 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+    private String firstname;
+    private String lastname;
     private String email;
     private String password;
+    private Integer tel;
 
     @ManyToOne()
     @JoinColumn(name="role")
@@ -53,5 +56,17 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public UserDto getUserDto() {
+        UserDto userDto = new UserDto();
+        userDto.setId(id);
+        userDto.setFirstname(firstname);
+        userDto.setLastname(lastname);
+        userDto.setEmail(email);
+        userDto.setPassword(password);
+        userDto.setTel(String.valueOf(tel));
+        userDto.setRole(role);
+        return userDto;
     }
 }

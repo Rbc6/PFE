@@ -31,15 +31,18 @@ public class WebSecurityConfiguration {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(req -> req
-                        .requestMatchers("/api/auth/**").permitAll()
-                        .requestMatchers("/api/admin/**").hasAnyAuthority("ADMIN")
-                        .anyRequest().authenticated()).sessionManagement
-                        (management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+               // .authorizeHttpRequests(req -> req
+                    //    .requestMatchers("/api/**").permitAll())
+                     //   .requestMatchers("/api/admin/**").hasAnyAuthority("ADMIN")
+                     //   .requestMatchers("/api/medecin/**").hasAnyAuthority("MEDECIN"))
+                      //  .anyRequest().authenticated())
+
+                .sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider())
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         return httpSecurity.build();
     }
+
 
     @Bean
     public PasswordEncoder passwordEncoder() {

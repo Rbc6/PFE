@@ -1,0 +1,21 @@
+<app-sidebar></app-sidebar>
+<div class="loginform">
+    <h2>Update User</h2>
+    <form autocomplete="off" [formGroup]="updateForm" (ngSubmit)="updateUser()">
+        <div class="input-group">
+            <input id="fname" type="text" placeholder="Firstname" formControlName="fname">
+            <input id="lname" type="text" placeholder="Lastname" formControlName="lname">
+        </div>
+        <div class="input-group">
+            <input id="email" type="email" placeholder="Email address" formControlName="email">
+            <input id="password" type="password" placeholder="Password" formControlName="password">
+        </div>
+        <div class="input-group">
+            <input id="tel" type="text" placeholder="Telephone" formControlName="tel">
+            <select name="role" id="role" formControlName="role" class="role">
+                <option *ngFor="let role of roles" [value]="role.id">{{ role.label }}</option>
+            </select>
+        </div>        
+        <button type="submit" name="login-btn" [disabled]="updateForm.invalid" (click)="updateUser()">Update</button>
+    </form>        
+</div>

@@ -1,0 +1,27 @@
+<app-sidebar></app-sidebar>
+<div style="background-color: #f8f8f8; min-height: 91vh; padding: 50px 100px; margin-left: 15%;">
+    <div style="padding-top: 10px;"></div>
+    <button style="margin-right: 50px;" nzSize="large" nz-button nzType="primary" routerLink="/add-user">Add</button>
+    <div style="margin-top: 10px;" class="child" *ngFor="let user of users">
+      <div nz-row style="background-color: #ccc; padding: 24px;">
+      
+  
+        <div nz-col nzSpan="16">
+          <h2 style="cursor: pointer; color: #108ee9;">{{user?.firstname}} - {{user?.lastname}}</h2>
+
+          <hr>
+  
+          <h5>Email: <b>{{user.email}}</b>   -Telephone : <b>{{user.tel}}</b> -  Role : <b>{{user?.userRole?.label}}</b> 
+          </h5>
+  
+          <div style="float: right;">
+            <button style="margin-left: 50px;" nzSize="small" nz-button nzType="primary"
+              routerLink="/admin/user/{{user.id}}">Update</button>
+  
+            <button style="margin-left: 50px;" nzSize="small" nz-button nzType="primary" nzDanger
+              (click)="deleteUser(user.id)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

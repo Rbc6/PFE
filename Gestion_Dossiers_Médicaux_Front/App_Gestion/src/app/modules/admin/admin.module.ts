@@ -4,14 +4,17 @@ import { AdminRoutingModule } from './admin-routing.module'
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component'
 import { NgZorroImportsModule } from '../../NgZorroImportsModule'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SidebarComponent } from './components/admin-dashboard/sidebar/sidebar.component';
-import { UsersComponent } from './components/users/users.component';
+import { SidebarComponent } from '../Common/sidebar/sidebar.component';
+
+import { AddUserComponent } from './components/add-user/add-user.component';
+import { UpdateUserComponent } from './components/update-user/update-user.component';
+import { ListUserComponent } from './components/list-user/list-user.component';
 
 
 
 
 @NgModule({
-  declarations: [AdminDashboardComponent, SidebarComponent, UsersComponent],
+  declarations: [AdminDashboardComponent, SidebarComponent,AddUserComponent, UpdateUserComponent, ListUserComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

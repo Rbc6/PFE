@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+.loginform {
+    width: 700px;
+    color: #007bff; /* Text color */
+    left: 55%;
+    margin-top: 240px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 20px ;
+    border-radius: 5px;
+    box-shadow: 0px 10px 29px 0px #e0e0e0;
+}
+
+.loginform h2 {
+    font-size: 30px;
+    margin: 30px 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    color: #007bff; /* Header text color */
+}
+
+.loginform input,
+.role {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+.loginform input[type="text"],
+.loginform input[type="email"],
+.loginform input[type="password"],
+.role
+ {
+    border: none;
+    border-bottom: 1px solid #000000; /* Border color */
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000000; /* Input text color */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.loginform input[type="submit"] {
+    background: #007bff; /* Button background color */
+    color: #ffffff; /* Button text color */
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.4s;
+    border: none;
+    margin-bottom: 5px;
+}
+
+.loginform input[type="submit"]:hover {
+    cursor: pointer;
+    background: #0056b3; /* Button hover background color */
+}
+
+.loginform a {
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: #ffffff; /* Link text color */
+}
+
+.loginform .have-not {
+    float: right;
+}
+
+.loginform a:hover {
+    color: #4CAF50; /* Hover link text color */
+}
+
+/*-- Responsive CSS --*/
+@media (max-width: 576px) {
+    .loginform {
+        width: 90%;
+    }
+    .loginform a {
+        display: block;
+        text-align: center;
+        float: inherit !important;
+        margin: 10px 0px;
+    }
+}
+.loginform .input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.loginform .input-group input[type="text"] {
+    width: calc(50% - 15px); /* Decrease width to add more space */
+    margin-right: 30px; /* Increase the right margin */
+    box-sizing: border-box; /* Include margins and borders in the width */
+}
+

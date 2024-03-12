@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core'
 
-const PREFIX_TOKEN_KEY = 'car_rental'
+const PREFIX_TOKEN_KEY = 'gestion'
 
 const TOKEN = `${PREFIX_TOKEN_KEY}.token`
 const USER = `${PREFIX_TOKEN_KEY}.user`
+const ROLE =`${PREFIX_TOKEN_KEY}.role`
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,10 @@ export class StorageService {
   static saveUser(user: any) {
     localStorage.removeItem(USER)
     localStorage.setItem(USER, JSON.stringify(user))
+  }
+  static saveRole(role:any){
+    localStorage.removeItem(ROLE)
+    localStorage.setItem(ROLE, JSON.stringify(role))
   }
 
   static getToken(): string | null {
@@ -42,6 +47,11 @@ export class StorageService {
 
     return this.getUserRole() === 0
   }
+  static isMedecinLoggedIn(): boolean {
+    if (this.getToken() == null) return false
+    return this.getUserRole() === 1
+  }
+  
 
  
   static logout() {

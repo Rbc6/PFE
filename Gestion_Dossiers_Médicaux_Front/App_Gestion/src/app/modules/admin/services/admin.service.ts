@@ -11,32 +11,40 @@ const BASIC_URL = 'http://localhost:8080'
 export class AdminService {
   constructor(private http: HttpClient) {}
 
-  postCar(carDto: any): Observable<any> {
-    return this.http.post(`${BASIC_URL}/api/admin/car`, carDto, {
+  addUser(userDto : any) : Observable<any> {
+    return this.http.post(`${BASIC_URL}/api/admin/user`,userDto,{
+      headers : this.createAuthorizationHeader()
+    })
+  }
+
+  getRoles(): Observable<any[]> {
+    return this.http.get<any[]>(`${BASIC_URL}/api/admin/role`,{
+      headers : this.createAuthorizationHeader()
+    });
+  }
+
+
+  getAllUsers(): Observable<any> {
+    return this.http.get(`${BASIC_URL}/api/admin/users`, {
       headers: this.createAuthorizationHeader()
     })
   }
 
-  getAllCars(): Observable<any> {
-    return this.http.get(`${BASIC_URL}/api/admin/cars`, {
+  deleteUser(id: number): Observable<any> {
+    return this.http.delete(`${BASIC_URL}/api/admin/user/${id}`, {
       headers: this.createAuthorizationHeader()
     })
   }
 
-  deleteCar(id: number): Observable<any> {
-    return this.http.delete(`${BASIC_URL}/api/admin/car/${id}`, {
+  getUserById(id: number): Observable<any> {
+    return this.http.get(`${BASIC_URL}/api/admin/user/${id}`, {
       headers: this.createAuthorizationHeader()
     })
   }
+  
 
-  getCarById(id: number): Observable<any> {
-    return this.http.get(`${BASIC_URL}/api/admin/car/${id}`, {
-      headers: this.createAuthorizationHeader()
-    })
-  }
-
-  updateCar(carId: number, carDto: any): Observable<any> {
-    return this.http.put(`${BASIC_URL}/api/admin/car/${carId}`, carDto, {
+  updateUser(id: number, userDto: any): Observable<any> {
+    return this.http.put(`${BASIC_URL}/api/admin/user/${id}`, userDto, {
       headers: this.createAuthorizationHeader()
     })
   }

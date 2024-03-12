@@ -9,14 +9,5 @@ import { NzMessageService } from 'ng-zorro-antd/message'
   styleUrl: './admin-dashboard.component.scss'
 })
 export class AdminDashboardComponent {
- 
-
-  constructor(
   
-  ) {}
-
-  ngOnInit() {
-    
-  }
-
 }
